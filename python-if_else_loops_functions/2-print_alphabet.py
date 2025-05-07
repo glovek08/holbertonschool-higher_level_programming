@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-print("abcdefghijklmnopqrstuvwxyz", end="")
+print("{abc}".format(abc = "abcdefghijklmnopqrstuvwxyz"), end="")
