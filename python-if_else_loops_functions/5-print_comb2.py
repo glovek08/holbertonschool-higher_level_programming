@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 for num in range(100):
-  print(f"{num}", end=", " if num < 99 else "\n")
+  print("{num}".format(num = num), end=", " if num < 99 else "\n")
   
