@@ -1,2 +1,5 @@
 #!/usr/bin/python3
-print("{abc}".format(abc = "abcdefghijklmnopqrstuvwxyz"), end="")
+char = 97
+while (char <= 123):
+    print("{}".format(chr(char)), end="")
+    char += 1
