@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 num = 0
-while num < 98:
+while num <= 98:
     def get_hex(n):
         temp = str(n)
         result = "".join([c for c in hex(n)])
