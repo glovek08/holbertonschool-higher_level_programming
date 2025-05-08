@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def toupper(str):
+def uppercase(str):
     str_to_byte = []
     for char in str:
         char = ord(char)
