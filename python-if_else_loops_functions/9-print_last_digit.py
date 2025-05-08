@@ -7,6 +7,3 @@ def print_last_digit(num):
         res = num % 10
     print(res, end="")
     return (res)
-
-
-print_last_digit(958)
