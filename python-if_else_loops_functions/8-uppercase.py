@@ -14,7 +14,6 @@ def toupper(str):
             if (char >= 97 and char <= 122):
                 char -= 32
             str_to_byte.append(chr(char))
-    print(str_to_byte)
+        
+    
 
-
-toupper("asda!@#!sad21123fSDFASD")
