@@ -8,6 +8,3 @@ def uppercase(str):
                 char -= 32
             str_to_byte.append(chr(char))
     print("{str}".format(str = (''.join(str_to_byte))))
-
-uppercase("!@#!@#   !@#!@#123sfsfasDWDAs23 2 ")
-
