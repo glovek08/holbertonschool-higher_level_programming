@@ -1,11 +1,4 @@
 #!/usr/bin/python3
-
-#parse str into a list
-#check if character is alphabetic
-#uppercase each character
-#join list into a string.
-#return it.
-
 def toupper(str):
     str_to_byte = []
     for char in str:
