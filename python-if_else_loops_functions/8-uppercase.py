@@ -7,5 +7,5 @@ def toupper(str):
             if (char >= 97 and char <= 122):
                 char -= 32
             str_to_byte.append(chr(char))
-    print(''.join(str_to_byte))
+    print("{str}".format(str = (''.join(str_to_byte))))
 
