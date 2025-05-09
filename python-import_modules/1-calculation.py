@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+import inspect
+import calculator_1
+b = 5
+a = 10
+if __name__ == "__main__":
+    calc_functions = {
+        name: obj for name, obj in inspect.getmembers(calculator_1, inspect.isfunction)
+    } 
+    for fname in calc_functions:
+        print("{}".format(calc_functions[fname](a, b)))
