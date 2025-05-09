@@ -5,11 +5,6 @@ b = 5
 a = 10
 i = 0
 operator = ['+', '-', '*', '/']
-    # DERP MODE?
-    # print("{} + {} = {}".format(a, b, calc1.add(a,b)))
-    # print("{} - {} = {}".format(a, b, calc1.sub(a,b)))
-    # print("{} * {} = {}".format(a, b, calc1.mul(a,b)))
-    # print("{} / {} = {}".format(a, b, calc1.div(a,b)))
 if __name__ == "__main__":
     calc_functions = {
         name: obj for name, obj in inspect.getmembers(calc1, inspect.isfunction)
