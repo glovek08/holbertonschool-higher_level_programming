@@ -6,4 +6,4 @@ def fizzbuzz():
             res += 'Fizz'
         if i % 5 == 0:
             res += 'Buzz'
-        print(res or i)
+        print((res or i), end=" ")
