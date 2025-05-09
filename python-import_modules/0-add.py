@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 from add_0 import add
-n1 = 1; n2 = 2
-print(f"{n1} + {n2} = {add(n1, n2)}")
+
+if __name__ == "__main__":
+    a = 1; b = 2
+    print(f"{a} + {b} = {add(a, b)}")
 
 
