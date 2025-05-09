@@ -3,6 +3,6 @@ from add_0 import add
 
 if __name__ == "__main__":
     a = 1; b = 2
-    print(f"{a} + {b} = {add(a, b)}")
+    print("{a} + {b} = {add_fun}".format(a=a, b=b, add_fun=add(a,b)))
 
 
