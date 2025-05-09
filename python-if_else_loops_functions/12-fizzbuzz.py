@@ -7,4 +7,3 @@ def fizzbuzz():
         if i % 5 == 0:
             res += 'Buzz'
         print((res or i), end=" ")
-fizzbuzz()
