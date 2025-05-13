@@ -6,7 +6,7 @@ def print_matrix_integer(matrix=[[]]):
     for outer in matrix:
         if (i != matrix_len):
             for inner in matrix[i]:
-                if (matrix[i].index(inner) + 1 != len(matrix[i])):
+                if (matrix[i].index(inner) + 1 != matrix_len):
                     print("{:d}".format(inner), end=' ')
                 else:
                     print("{:d}".format(inner), end='')
