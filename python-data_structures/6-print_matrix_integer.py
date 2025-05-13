@@ -2,13 +2,10 @@
 
 def print_matrix_integer(matrix=[[]]):
     matrix_len = len(matrix)
-    i = 0
-    for outer in matrix:
-        if (i != matrix_len):
-            for inner in matrix[i]:
-                if (matrix[i].index(inner) + 1 != matrix_len):
-                    print("{:d}".format(inner), end=' ')
-                else:
-                    print("{:d}".format(inner), end='')
+    for outer in range(len(matrix)):
+        row = matrix[outer]
+        for inner in range(len(row)):
+            print("{:d}".format(row[inner]), end='')
+            if inner != len(row) - 1:
+                print(" ", end='')
         print()
-        i += 1
