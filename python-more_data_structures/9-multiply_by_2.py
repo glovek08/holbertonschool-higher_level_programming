@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 
 def multiply_by_2(a_dictionary):
-    for key in a_dictionary:
-        if isinstance(a_dictionary[key], int):
+    new_dict = a_dictionary.copy()
+    for key in new_dict:
+        if isinstance(new_dict[key], int):
             try:
-                a_dictionary[key] *= 2
+                new_dict[key] *= 2
             except Exception as error:
                 print(error)
                 continue
-    return a_dictionary
+    return new_dict
