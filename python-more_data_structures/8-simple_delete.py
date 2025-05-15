@@ -1,10 +1,6 @@
 #!/usr/bin/python3
 
 def simple_delete(a_dictionary, key=""):
-    try:
-        a_dictionary.pop(key)
-    except Exception as error:
-        print("Couldn't delete item: ", end='')
-        print(error)
-        return -1
+    if key in a_dictionary:
+        del a_dictionary[key]
     return a_dictionary
