@@ -9,6 +9,6 @@ def best_score(a_dictionary):
         return sorted_dict[-1][0]
     except Exception as error:
         print(error)
-        return None
+        return None 
 # print(f"Before: {dict1}")
 # print(f"After: {best_score(dict1)}")
