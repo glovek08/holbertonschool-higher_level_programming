@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-from collections import deque
-
 
 def get_roman_value(char):
     if char == 'I':
@@ -26,18 +24,20 @@ def roman_to_int(roman_string):
     result = 0
     max_int = 3999
 
-    roman_chars = deque(roman_string.upper())
+    s = roman_string.upper()
+    n = len(s)
 
-    memory = deque()  # queue -> stores processed characters (AKA Recall)
-
-    while roman_chars:
-        current_char = roman_chars[0]
+    i = 0
+    while i < n:
+        current_char = s[i]
         current_value = get_roman_value(current_char)
+
         if current_value == 0:
-            roman_chars.popleft()
+            i += 1
             continue
-        if len(roman_chars) > 1:
-            next_char = roman_chars[1]
+
+        if i + 1 < n:
+            next_char = s[i + 1]
             next_value = get_roman_value(next_char)
 
             if current_value < next_value:
@@ -46,9 +46,10 @@ def roman_to_int(roman_string):
                 result += current_value
         else:
             result += current_value
-        roman_chars.popleft()
+
+        i += 1
+
         if result > max_int:
             return max_int
-    return result
 
-# print(roman_to_int("XXCMC"))
+    return result
