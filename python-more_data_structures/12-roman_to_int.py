@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-
 def get_roman_value(char):
     if char == 'I':
         return 1
@@ -21,10 +20,9 @@ def get_roman_value(char):
 
 
 def roman_to_int(roman_string):
-    
-    if not (isinstance(roman_string, str)) or (roman_string == None):
+    if not (isinstance(roman_string, str)) or (roman_string is None):
         return 0
-    
+
     result = 0
     max_int = 3999
 
