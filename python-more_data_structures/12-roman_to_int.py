@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+
 from collections import deque
+
 
 def get_roman_value(char):
     if char == 'I':
@@ -26,7 +28,7 @@ def roman_to_int(roman_string):
 
     roman_chars = deque(roman_string.upper())
 
-    memory = deque() # queue -> stores processed characters (AKA Recall)
+    memory = deque()  # queue -> stores processed characters (AKA Recall)
 
     while roman_chars:
         current_char = roman_chars[0]
