@@ -3,6 +3,8 @@
     This module returns the
     addition of two given arguments.
 """
+
+
 def add_integer(a, b=98):
     """
         Function that returns the sum of 2 arguments.
