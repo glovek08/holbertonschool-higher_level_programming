@@ -1,0 +1,43 @@
+************ Matrix divided tests ************
+"""
+    Test for function matrix_divided
+    Receives a matrix, returns a new matrix with an element-wise
+    division from the original matrix.
+    Raises TypeError on data type missmatch.
+    Must import module "2-matrix_divided"
+"""
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+>>> matrix_divided([[1, 2], [3, 4]], 2)
+[[0.5, 1.0], [1.5, 2.0]]
+
+>>> matrix_divided([[4, 8], [12, 16]], 4)
+[[1.0, 2.0], [3.0, 4.0]]
+
+>>> matrix_divided([[5.5, 6.5], [7.5, 8.5]], 2)
+[[2.75, 3.25], [3.75, 4.25]]
+
+>>> matrix_divided([[1, 2], [3, 4, 5]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix_divided([[1, "a"], [3, 4]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided("not a matrix", 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided([[1, 2], [3, 4]], "2")
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+
+>>> matrix_divided([[1, 2], [3, 4]], 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
