@@ -1,92 +1,71 @@
-# text_indentation_tests.txt
+The ``text_indentation(text)`` function prints a text with 2 new lines after
+each of these characters: ., ? and :
 
+Function's Behavior:
+====================
+
+Basic usage:
+-----------
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-# Test case 1: Basic test with multiple sentences and mixed punctuation
->>> text_indentation("Hello. How are you? I am fine: Thank you.")
+>>> text_indentation("Hello. How are you? Fine: thanks.")
 Hello.
-
+<BLANKLINE>
 How are you?
+<BLANKLINE>
+Fine:
+<BLANKLINE>
+thanks.
+<BLANKLINE>
 
-I am fine:
+Text without special characters:
+------------------------------
 
-Thank you.
+>>> text_indentation("Hello")
+Hello
 
-# Test case 2: Punctuation at the beginning
->>> text_indentation(". This is the start.")
+Spaces after special characters:
+-----------------------------
+
+>>> text_indentation("Hi.   How are you?")
+Hi.
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+
+No special characters in text:
+---------------------------
+
+>>> text_indentation("No special chars here")
+No special chars here
+
+Multiple special characters:
+-------------------------
+
+>>> text_indentation("Multiple... special. chars? in: sequence.")
+Multiple.
+<BLANKLINE>
 .
-
-This is the start.
-
-# Test case 3: Punctuation at the end
->>> text_indentation("End of sentence.")
-End of sentence.
-
-# Test case 4: Multiple punctuation marks together
->>> text_indentation("Sentence.. Another?? One:: More...")
-Sentence.
-
+<BLANKLINE>
 .
+<BLANKLINE>
+special.
+<BLANKLINE>
+chars?
+<BLANKLINE>
+in:
+<BLANKLINE>
+sequence.
+<BLANKLINE>
 
-Another?
+Empty string:
+-----------
 
-?
-
-One:
-
-:
-
-More...
-
-# Test case 5: Text with leading/trailing spaces
->>> text_indentation("  Leading spaces. Trailing spaces.  ")
-  Leading spaces.
-
-Trailing spaces.
-
-# Note: The current implementation only strips leading/trailing spaces from the *whole* text
-# after replacements, not around the punctuation.
-# Let's add a test for spaces around punctuation
-
-# Test case 6: Spaces around punctuation (should not be stripped by current logic)
->>> text_indentation("Hello . World ? Test : Again")
-Hello .
-
-World ?
-
-Test :
-
-Again
-
-# Test case 7: Empty string
 >>> text_indentation("")
 
+Non-string input (should raise TypeError):
+--------------------------------------
 
-# Test case 8: String with only spaces and punctuation
->>> text_indentation("  . ? :  ")
-.
-
-?
-
-:
-
-# Test case 9: Invalid input type (integer)
->>> try:
-...     text_indentation(123)
-... except TypeError as e:
-...     print(e)
-text must be a string
-
-# Test case 10: Invalid input type (list)
->>> try:
-...     text_indentation(["hello", "world"])
-... except TypeError as e:
-...     print(e)
-text must be a string
-
-# Test case 11: Invalid input type (None)
->>> try:
-...     text_indentation(None)
-... except TypeError as e:
-...     print(e)
-text must be a string
+>>> text_indentation(123)
+Traceback (most recent call last):
+TypeError: text must be a string
