@@ -1,13 +1,8 @@
-************** TEST CASES FOR say_my_name ***************
+# python-test_driven_development/tests/3-say_my_name.txt
 
-"""
-    So yeah test this stuff.
-    Oh yeah test me baby.
-    Yes that's it.
-    soooo... We gonna get to mars and GTA VI hasn't come out yet.
-    like bro... C'mon Rockstar.
-"""
+# ************** TEST CASES FOR say_my_name ***************
 
+# Import the function using the __import__ method to handle the non-standard filename
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 >>> say_my_name("John", "Smith")
@@ -17,22 +12,22 @@ My name is Walter
 >>> say_my_name("Walter", "")
 My name is Walter
 >>> try:
-...     say_my_name(123, "White")
+...     say_my_name(123, "White") # <--- Ensure these are standard spaces
 ... except TypeError as e:
-...     print(e)
+...     print(e) # <--- Ensure these are standard spaces
 first_name must be a string
 >>> try:
-...     say_my_name("Walter", 123)
+...     say_my_name("Walter", 123) # <--- Ensure these are standard spaces
 ... except TypeError as e:
-...     print(e)
+...     print(e) # <--- Ensure these are standard spaces
 last_name must be a string
 >>> try:
-...     say_my_name(None)
+...     say_my_name(None) # <--- Ensure these are standard spaces
 ... except TypeError as e:
-...     print(e)
+...     print(e) # <--- Ensure these are standard spaces
 first_name must be a string
 >>> try:
-...     say_my_name("Walter", None)
+...     say_my_name("Walter", None) # <--- Ensure these are standard spaces
 ... except TypeError as e:
-...     print(e)
+...     print(e) # <--- Ensure these are standard spaces
 last_name must be a string
