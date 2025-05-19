@@ -18,7 +18,7 @@
 
 # Test with size 0
 >>> print_square(0)
-<BLANKLINE>
+
 
 # Test with size 1
 >>> print_square(1)
@@ -57,5 +57,4 @@ size must be an integer
 ...     print_square(5.0)
 ... except TypeError as e:
 ...     print(e)
-        print(e)
 size must be an integer
