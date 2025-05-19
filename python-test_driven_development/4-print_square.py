@@ -3,6 +3,9 @@
     This module is now well documented.
 """
 def print_square(size: int = 0):
+    """
+        This function documentation is excellent.
+    """
     if not isinstance(size, int):
         raise TypeError("size must be an integer")
     if size < 0:
