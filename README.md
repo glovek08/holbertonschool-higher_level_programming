@@ -38,7 +38,7 @@ The main directories in this repository include:
 - **python-more_data_structures/**: Advanced data structures techniques.
 - **python-exceptions/**: Exception handling in Python.
 - **python-test_driven_development/**: Test-driven development and doctest.
-- *(Add or remove directories as they appear in your repo)*
+- will update when new directories are added... For now, GFY, nah Jk, love u bro. 
 
 Each directory contains its own README or documentation, Python scripts, and sometimes test files.
 
