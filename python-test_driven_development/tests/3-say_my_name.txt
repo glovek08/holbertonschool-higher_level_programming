@@ -1,0 +1,38 @@
+************** TEST CASES FOR say_my_name ***************
+
+"""
+    So yeah test this stuff.
+    Oh yeah test me baby.
+    Yes that's it.
+    soooo... We gonna get to mars and GTA VI hasn't come out yet.
+    like bro... C'mon Rockstar.
+"""
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name("John", "Smith")
+My name is John Smith
+>>> say_my_name("Walter")
+My name is Walter
+>>> say_my_name("Walter", "")
+My name is Walter
+>>> try:
+...     say_my_name(123, "White")
+... except TypeError as e:
+...     print(e)
+first_name must be a string
+>>> try:
+...     say_my_name("Walter", 123)
+... except TypeError as e:
+...     print(e)
+last_name must be a string
+>>> try:
+...     say_my_name(None)
+... except TypeError as e:
+...     print(e)
+first_name must be a string
+>>> try:
+...     say_my_name("Walter", None)
+... except TypeError as e:
+...     print(e)
+last_name must be a string
