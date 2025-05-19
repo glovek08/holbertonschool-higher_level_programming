@@ -1,0 +1,61 @@
+# square_tests.txt
+
+"""
+    Foster the people
+"""
+
+# Import the function to be tested
+>>> print_square = __import__('4-print_square').print_square
+
+# Test cases extracted from the docstring
+
+# Test with a positive integer
+>>> print_square(4)
+####
+####
+####
+####
+
+# Test with size 0
+>>> print_square(0)
+<BLANKLINE>
+
+# Test with size 1
+>>> print_square(1)
+#
+
+# Test with a negative integer (should raise ValueError)
+>>> try:
+...     print_square(-2)
+... except ValueError as e:
+...     print(e)
+size must be >= 0
+
+# Test with a positive float (should raise TypeError)
+>>> try:
+...     print_square(1.5)
+... except TypeError as e:
+...     print(e)
+size must be an integer
+
+# Test with a string (should raise TypeError)
+>>> try:
+...     print_square("hello")
+... except TypeError as e:
+...     print(e)
+size must be an integer
+
+# Test with None (should raise TypeError)
+>>> try:
+...     print_square(None)
+... except TypeError as e:
+...     print(e)
+size must be an integer
+
+# Test with a float that is >= 0 (should still be TypeError)
+>>> try:
+...     print_square(5.0)
+... except TypeError as e:
+...     print(e)
+        print(e)
+size must be an integer
