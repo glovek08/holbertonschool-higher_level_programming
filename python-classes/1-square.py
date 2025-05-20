@@ -9,7 +9,7 @@ class Square:
     """
         This is a square class, now it initalizes
         the private attribute of size
-        (int) _size: Square's size. 
+        (int) __Square_size: Square's size. 
     """
     def __init__(self, size):
-        self._Square_size = size
+        self.__Square_size = size
