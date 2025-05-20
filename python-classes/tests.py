@@ -1,10 +1,10 @@
 
 class Car:
     def __init__(self, color: str="", brand: str="", year: int=None):
-        self.color = color
-        self.brand = brand
-        self.year = year
-    
+        self.setColor(color)
+        self.setBrand(brand)
+        self.setYear(year)
+
     def setColor(self, color: str):
         try:
             self.color = color
