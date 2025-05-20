@@ -9,7 +9,7 @@ class Square:
         This class defines a square. It receives a size,
         which is of type int and must not be lower than 0,
         defaults to 0 if no value is given.
-        
+
         (int) __size: Square's size.
     """
     def __init__(self, size: int = 0):
