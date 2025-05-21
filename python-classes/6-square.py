@@ -130,7 +130,7 @@ class Square:
             for row in range(self.size):
                 print(" " * self.position[0], end="")
                 for column in range(self.size):
-                    print(SQUARE_SYMBOL, end="")
+                    print(Square.SQUARE_SYMBOL, end="")
                 print()
 
 # new_square = Square(4, (3, 3))
