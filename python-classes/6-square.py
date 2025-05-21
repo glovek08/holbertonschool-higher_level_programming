@@ -23,8 +23,11 @@ class Square:
                 TypeError: If size is not an integer.
                 ValueError: If size is less than 0.
         """
+        if not (isinstance(position, tuple)):
+            raise TypeError("position must be a tuple of 2 positive integers")
+
         self.size = size
-        self.__position = position
+        self.__position = position #use the setter?
 
     @property
     def size(self) -> int:
