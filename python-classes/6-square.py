@@ -50,7 +50,8 @@ class Square:
             elif (item < 0):
                 raise custom_type_error
             # Use this code if coordinates are used to replace a specific
-            # character from the square.
+            # character from the square instead of using them for Off-setting
+            # the square.
             # if (item > size -1):
             #     position = (0, 0)
             #     print(f"Warning: Out of bounds position, Square Size:\
@@ -123,7 +124,7 @@ class Square:
         """
 
         if (self.size == 0):
-            return
+            print("")
         else:
             for item in range(self.position[1]):
                 print()
