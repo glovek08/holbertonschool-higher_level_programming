@@ -4,6 +4,7 @@
 """
 
 
+custom_type_error = TypeError("position must be a tuple of 2 positive integers")
 class Square:
     """
         Represents a square with a given size.
@@ -18,15 +19,19 @@ class Square:
 
             Args:
                 size (int): The size of the square. Must be an integer >= 0.
+                position (tuple): A square coordinate. Must be an int tuple !negative
 
             Raises:
-                TypeError: If size is not an integer.
+                TypeError: If size is not int, position not positive int tuple or length != 2
                 ValueError: If size is less than 0.
         """
         if not (isinstance(position, tuple)):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if (len(position) != 2):
-            raise TypeError("position must be a tuple of 2 positive integers")
+            raise custom_type_error
+        elif (len(position) != 2):
+            raise custom_type_error
+        for item in position:
+            if (item < 0):
+                raise custom_type_error
 
         self.size = size
         self.__position = position #use the setter?
@@ -76,7 +81,7 @@ class Square:
         """
         for item in value:
             if not (isinstance(item, int)):
-                raise TypeError("position must be an tuple of 2 integers")
+                raise custom_type_error
         self.__position = value
 
     def area(self) -> int:
