@@ -5,7 +5,7 @@
 
 
 custom_type_error = TypeError("position must be a tuple of 2\
-    positive integers")
+positive integers")
 
 
 def sum_tuple(tuple_: tuple) -> int:
