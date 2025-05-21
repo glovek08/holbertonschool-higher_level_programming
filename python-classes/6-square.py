@@ -4,7 +4,18 @@
 """
 
 
-custom_type_error = TypeError("position must be a tuple of 2 positive integers")
+custom_type_error = TypeError("position must be a tuple of 2\
+    positive integers")
+
+
+def sum_tuple(tuple_: tuple) -> int:
+    listed_tuple = list(tuple_)
+    count = 0
+    for each in listed_tuple:
+        count += each
+    return count
+
+
 class Square:
     """
         Represents a square with a given size.
@@ -19,10 +30,12 @@ class Square:
 
             Args:
                 size (int): The size of the square. Must be an integer >= 0.
-                position (tuple): A square coordinate. Must be an int tuple !negative
+                position (tuple): A square coordinate. \
+                    Must be an int tuple !negative
 
             Raises:
-                TypeError: If size is not int, position not positive int tuple or length != 2
+                TypeError: If size is not int, position not positive \
+                    int tuple or length != 2
                 ValueError: If size is less than 0.
         """
         if not (isinstance(position, tuple)):
@@ -34,9 +47,13 @@ class Square:
                 raise custom_type_error
             elif (item < 0):
                 raise custom_type_error
+            # if (item > size -1):
+            #     position = (0, 0)
+            #     print(f"Warning: Out of bounds position, Square Size:\
+            #       {size}. Position Reset.")
 
         self.size = size
-        self.__position = position #use the setter?
+        self.__position = position  # uses the setter?
 
     @property
     def size(self) -> int:
@@ -69,9 +86,9 @@ class Square:
     @property
     def position(self) -> int:
         """
-            Retrieves the a coordinate of the square.
+            Retrieves a Square's coordinates.
 
-            Returns:
+            Returns: or not -> ?
                 int: The position at the given coordinate.
         """
         return self.__position
@@ -100,16 +117,23 @@ class Square:
             Prints the square object.
             If size = 0, it prints nothing.
         """
-        square_symbol = "#"
+        SQUARE_SYMBOL = "#"
+
         if (self.size == 0):
             print()
         else:
+            for iitem in range(self.position[0]):
+                print()
             for row in range(self.size):
-                print(square_symbol * self.size)
+                print(" " * self.position[0], end="")
+                for column in range(self.size):
+                    print(SQUARE_SYMBOL, end="")
+                print()
 
-# new_square = Square(12, (1, 5))
+# new_square = Square(4, (3, 3))
 # new_square.my_print()
 # print(new_square.position)
 # new_square.position = (1, 2)
-# print("-------------")
+# print("------- IULIUS CAESAR -------")
 # print(new_square.position)
+# new_square.my_print()
