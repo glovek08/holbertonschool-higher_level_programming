@@ -61,3 +61,15 @@ class Square:
                 int: The area of the square.
         """
         return self.__size * self.__size
+
+    def my_print(self):
+        """
+            Prints the square object.
+            If size = 0, it prints nothing.
+        """
+        square_symbol = "#"
+        if (self.size == 0):
+            print()
+        else:
+            for row in range(self.size):
+                print(square_symbol * self.size)
