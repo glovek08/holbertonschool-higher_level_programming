@@ -12,7 +12,7 @@ class Square:
             __size (int): The size of the square's side. Must be >= 0.
     """
     def __init__(self, size: int = 0):
-        self.size(self, size)
+        self.size(size)
 
     def size(self):
         return self.__size
