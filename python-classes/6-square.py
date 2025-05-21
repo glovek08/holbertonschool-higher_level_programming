@@ -30,7 +30,7 @@ class Square:
         elif (len(position) != 2):
             raise custom_type_error
         for item in position:
-            if (item < 0):
+            if (item < 0 or not isinstance(item, int)):
                 raise custom_type_error
 
         self.size = size
