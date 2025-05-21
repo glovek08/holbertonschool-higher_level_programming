@@ -24,6 +24,8 @@ class Square:
             __size (int): The size of the square's side. Must be >= 0.
     """
 
+    SQUARE_SYMBOL = "#"
+
     def __init__(self, size: int = 0, position: tuple = (0, 0)):
         """
             Initializes a Square instance.
@@ -47,6 +49,8 @@ class Square:
                 raise custom_type_error
             elif (item < 0):
                 raise custom_type_error
+            # Use this code if coordinates are used to replace a specific
+            # character from the square.
             # if (item > size -1):
             #     position = (0, 0)
             #     print(f"Warning: Out of bounds position, Square Size:\
@@ -117,12 +121,11 @@ class Square:
             Prints the square object.
             If size = 0, it prints nothing.
         """
-        SQUARE_SYMBOL = "#"
 
         if (self.size == 0):
-            print()
+            return
         else:
-            for iitem in range(self.position[0]):
+            for item in range(self.position[1]):
                 print()
             for row in range(self.size):
                 print(" " * self.position[0], end="")
