@@ -34,24 +34,24 @@ class Square:
                     int tuple or length != 2
             ValueError: If size is less than 0.
         """
-    if not (isinstance(position, tuple)):
-        raise custom_type_error
-    elif (len(position) != 2):
-        raise custom_type_error
-    for item in position:
-        if not isinstance(item, int):
+        if not (isinstance(position, tuple)):
             raise custom_type_error
-        elif (item < 0):
+        elif (len(position) != 2):
             raise custom_type_error
-        # Use this code if coordinates are used to replace a specific
-        # character from the square instead of using them for Off-setting
-        # the square.
-        # if (item > size -1):
-        #  position = (0, 0)
-        #  print(f"Warning: Out of bounds position, Square Size:\
-        #   {size}. Position Reset.")
-    self.size = size
-    self.position = position  # uses the setter
+        for item in position:
+            if not isinstance(item, int):
+                raise custom_type_error
+            elif (item < 0):
+                raise custom_type_error
+            # Use this code if coordinates are used to replace a specific
+            # character from the square instead of using them for Off-setting
+            # the square.
+            # if (item > size -1):
+            #  position = (0, 0)
+            #  print(f"Warning: Out of bounds position, Square Size:\
+            #   {size}. Position Reset.")
+        self.size = size
+        self.position = position  # uses the setter
 
     @property
     def size(self) -> int:
@@ -92,10 +92,10 @@ class Square:
         """
             Sets the
         """
-    for item in value:
-        if not (isinstance(item, int)):
-            raise custom_type_error
-        self.__position = value
+        for item in value:
+            if not (isinstance(item, int)):
+                raise custom_type_error
+            self.__position = value
 
     def area(self) -> int:
         """
