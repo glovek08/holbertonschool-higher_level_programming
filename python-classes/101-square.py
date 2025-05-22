@@ -21,6 +21,7 @@ class Square:
             __size (int): The size of the square's side. Must be >= 0.
     """
     SQUARE_SYMBOL = "#"
+    squares_list = []
 
     def __init__(self, size: int = 0, position: tuple = (0, 0)):
         """
@@ -52,6 +53,10 @@ class Square:
             #   {size}. Position Reset.")
         self.size = size
         self.position = position  # uses the setter
+        self.squares_list.append(self)
+
+    def __str__(self):
+        return f"{self.my_print()}"
 
     @property
     def size(self) -> int:
@@ -120,10 +125,15 @@ class Square:
                 for column in range(self.size):
                     print(Square.SQUARE_SYMBOL, end="")
                 print()
-new_square = Square(4, (3, 3))
-new_square.my_print()
-print(new_square.position)
-new_square.position = (1, 2)
-print("------- IULIUS CAESAR -------")
-print(new_square.position)
-new_square.my_print()
+
+# new_square1 = Square(4, (3, 3))
+# new_square1.my_print()
+# print("Other Square:")
+# new_square2 = Square(6, (3, 6))
+# print(new_square.position)
+# new_square.position = (1, 2)
+# print("------- IULIUS CAESAR -------")
+# print(new_square.position)
+# new_square2.my_print()
+
+# print(f"Square Print inside class: {new_square2}")
