@@ -14,7 +14,7 @@ class Node:
         linked list.
     """
 
-    def __init__(self, data: int = 0, next_node = None):
+    def __init__(self, data: int = 0, next_node=None):
         self.data = data
         self.next_node = next_node
 
