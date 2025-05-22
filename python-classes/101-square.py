@@ -56,6 +56,8 @@ class Square:
         self.squares_list.append(self)
 
     def __str__(self):
+        if (self.size == 0):
+            return
         return f"{self.my_print()}"
 
     @property
