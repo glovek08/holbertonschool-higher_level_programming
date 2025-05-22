@@ -57,7 +57,7 @@ class Square:
 
     def __str__(self):
         if (self.size == 0):
-            return
+            return ""
         return f"{self.my_print()}"
 
     @property
