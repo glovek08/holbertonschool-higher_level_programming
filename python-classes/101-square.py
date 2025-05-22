@@ -58,7 +58,7 @@ class Square:
     def __str__(self):
         if (self.size == 0):
             return ""
-        return f"{self.my_print()}"
+        return self.my_print()
 
     @property
     def size(self) -> int:
@@ -118,7 +118,7 @@ class Square:
             If size = 0, it prints nothing.
         """
         if (self.size == 0):
-            print("")
+            return ""
         else:
             for item in range(self.position[1]):
                 print()
