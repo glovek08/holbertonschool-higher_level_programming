@@ -74,8 +74,8 @@ class Rectangle:
     def __del__(self):
         print("Bye rectangle...")
 
-rect1 = Rectangle(3, 3)
-print(rect1)
+# rect1 = Rectangle(3, 3)
+# print(rect1)
 # print(repr(rect1))
 # myrectangle = Rectangle(2, 4)
 # print(str(rect1))
