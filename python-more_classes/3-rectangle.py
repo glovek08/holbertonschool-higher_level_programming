@@ -60,16 +60,16 @@ class Rectangle:
                     rectangle_string += '\n'
         return rectangle_string
 
-    def __repr__(self):
-        rectangle_string = ""
-        if self.width == 0 or self.height == 0:
-            return rectangle_string
-        else:
-            for row in range(self.height):
-                rectangle_string += RECTANGLE_SYMBOL * self.width
-                if row < self.height - 1:
-                    rectangle_string += '\n'
-        return rectangle_string
+    # def __repr__(self):
+        # rectangle_string = ""
+        # if self.width == 0 or self.height == 0:
+        #     return rectangle_string
+        # else:
+        #     for row in range(self.height):
+        #         rectangle_string += RECTANGLE_SYMBOL * self.width
+        #         if row < self.height - 1:
+        #             rectangle_string += '\n'
+        # return rectangle_string
 
 # rect1 = Rectangle(3, 5)
 # print(rect1)
