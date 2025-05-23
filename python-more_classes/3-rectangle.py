@@ -10,6 +10,7 @@ class Rectangle:
     """
     Defines a rectangle, with its width and height (Must be int)
     """
+
     def __init__(self, width: int = 0, height: int = 0):
         self.width = width
         self.height = height
@@ -57,5 +58,16 @@ class Rectangle:
                 rectangle_string += RECTANGLE_SYMBOL * self.width + '\n'
         return rectangle_string
 
-rect1 = Rectangle(3, 5)
-print(rect1)
+    def __repr__(self):
+        rectangle_string = ""
+        if self.width == 0 or self.height == 0:
+            return rectangle_string
+        else:
+            for row in range(self.height):
+                rectangle_string += RECTANGLE_SYMBOL * self.width + '\n'
+        return rectangle_string
+
+# rect1 = Rectangle(3, 5)
+# print(rect1)
+# myrectangle = Rectangle(2, 4)
+# print(str(rect1))
