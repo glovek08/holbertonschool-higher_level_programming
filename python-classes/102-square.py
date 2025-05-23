@@ -27,10 +27,13 @@ class Square:
 
     def __int__(self):
         return self.area()
+
     def __eq__(self, other):
         return self.area() == other.area()
+
     def __lt__(self, other):
         return self.area() < other.area()
+
     def __le__(self, other):
         return self.area() <= other.area()
 
