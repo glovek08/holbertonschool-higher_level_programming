@@ -3,15 +3,13 @@
 Defines a Rectangle class.
 """
 
-RECTANGLE_SYMBOL = "#"
-
 
 class Rectangle:
     """
     Defines a rectangle, with its width and height (Must be int)
     """
     number_of_instances = 0
-    print_symbol = RECTANGLE_SYMBOL
+    print_symbol = "#"
 
     def __init__(self, width: int = 0, height: int = 0):
         self.width = width
@@ -66,7 +64,7 @@ class Rectangle:
             return rectangle_string
         else:
             for row in range(self.height):
-                rectangle_string += RECTANGLE_SYMBOL * self.width
+                rectangle_string += str(self.print_symbol) * self.width
                 if row < self.height - 1:
                     rectangle_string += '\n'
         return rectangle_string
