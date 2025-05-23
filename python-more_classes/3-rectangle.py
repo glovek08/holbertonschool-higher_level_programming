@@ -55,7 +55,9 @@ class Rectangle:
             return rectangle_string
         else:
             for row in range(self.height):
-                rectangle_string += RECTANGLE_SYMBOL * self.width + '\n'
+                rectangle_string += RECTANGLE_SYMBOL * self.width
+                if row < self.height - 1:
+                    rectangle_string += '\n'
         return rectangle_string
 
     def __repr__(self):
@@ -64,7 +66,9 @@ class Rectangle:
             return rectangle_string
         else:
             for row in range(self.height):
-                rectangle_string += RECTANGLE_SYMBOL * self.width + '\n'
+                rectangle_string += RECTANGLE_SYMBOL * self.width
+                if row < self.height - 1:
+                    rectangle_string += '\n'
         return rectangle_string
 
 # rect1 = Rectangle(3, 5)
