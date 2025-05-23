@@ -59,6 +59,7 @@ class Square:
         if (self.size == 0):
             return ""
         return self.my_print()
+        return str(self.area())
 
     @property
     def size(self) -> int:
@@ -128,14 +129,14 @@ class Square:
                     print(Square.SQUARE_SYMBOL, end="")
                 print()
 
-# new_square1 = Square(4, (3, 3))
-# new_square1.my_print()
+new_square1 = Square(4, (3, 3))
+new_square1.my_print()
 # print("Other Square:")
-# new_square2 = Square(6, (3, 6))
+new_square2 = Square(6, (3, 6))
 # print(new_square.position)
 # new_square.position = (1, 2)
 # print("------- IULIUS CAESAR -------")
 # print(new_square.position)
 # new_square2.my_print()
 
-# print(f"Square Print inside class: {new_square2}")
+print(f"Square Print inside class: {new_square1 < new_square2}")
