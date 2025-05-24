@@ -22,16 +22,21 @@ class Rectangle:
 
     @width.setter
     def width(self, width: int = 0):
-        try:
-            width = int(width)
-        except (TypeError, ValueError):
+        if not isinstance(width, int):
             raise TypeError("width must be an integer")
-        # if isinstance(width, int) and width >= 0:
-        #     self.__width = width
-        if width < 0:
+        elif width < 0:
             raise ValueError("width must be >= 0")
-        else:
-            self.__width = width
+        self.__width = width
+        # try:
+        #     width = int(width)
+        # except (TypeError, ValueError):
+        #     raise TypeError("width must be an integer")
+        # # if isinstance(width, int) and width >= 0:
+        # #     self.__width = width
+        # if width < 0:
+        #     raise ValueError("width must be >= 0")
+        # else:
+        #     self.__width = width
 
     @property
     def height(self) -> int:
@@ -39,16 +44,21 @@ class Rectangle:
 
     @height.setter
     def height(self, height: int = 0):
-        try:
-            height = int(height)
-        except (TypeError, ValueError):
+        if not isinstance(height, int):
             raise TypeError("height must be an integer")
-        # if isinstance(height, int) and height >= 0:
-        #     self.__width = height
-        if height < 0:
+        elif height < 0:
             raise ValueError("height must be >= 0")
-        else:
-            self.__height = height
+        self.__height = height
+        # try:
+        #     height = int(height)
+        # except (TypeError, ValueError):
+        #     raise TypeError("height must be an integer")
+        # # if isinstance(height, int) and height >= 0:
+        # #     self.__width = height
+        # if height < 0:
+        #     raise ValueError("height must be >= 0")
+        # else:
+        #     self.__height = height
 
     def area(self) -> int:
         return self.width * self.height
@@ -79,7 +89,6 @@ class Rectangle:
     @classmethod
     def square(cls, size: int = 0):
         return cls(size, size)
-        # print(f"New square created: {new_obj.__repr__()}")
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
