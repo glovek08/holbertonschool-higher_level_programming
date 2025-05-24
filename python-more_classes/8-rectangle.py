@@ -76,8 +76,26 @@ class Rectangle:
         self.__class__.number_of_instances -= 1
         print("Bye rectangle...")
 
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        if not (isinstance(rect_1, Rectangle)):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not (isinstance(rect_2, Rectangle)):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        return (rect_1 if rect_1.area() >= rect_2.area()
+                else rect_2)
+
 # rect1 = Rectangle(3, 3)
-# print(rect1)
-# print(repr(rect1))
-# myrectangle = Rectangle(2, 4)
-# print(str(rect1))
+# rect2 = Rectangle(4, 3)
+# print(f"rect1:\n{rect1}")
+# print(f"rect1 repr: {repr(rect1)}")
+# print(f"rect1 hash: {rect1.__hash__()}")
+# print(f"rect1 str:\n{str(rect1)}")
+# print('---- ALEA IACTA EST! ----')
+# print(f"rect2:\n{rect2}")
+# print(f"rect2 repr: {repr(rect2)}")
+# print(f"rect2 hash: {rect2.__hash__()}")
+# print(f"rect2 str:\n{str(rect2)}")
+# print()
+# print("Which one is bigger:")
+# print(Rectangle.bigger_or_equal(rect1, rect2))
