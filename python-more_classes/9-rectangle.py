@@ -78,13 +78,8 @@ class Rectangle:
 
     @classmethod
     def square(cls, size: int = 0):
-        try:
-            new_obj = cls(size, size)
-        except Exception as error:
-            print(error)
-            return
+        return cls(size, size)
         # print(f"New square created: {new_obj.__repr__()}")
-        return new_obj
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
