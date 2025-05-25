@@ -16,19 +16,20 @@ from sys import argv
 # print(f"Board Size: {board_size}")
 
 
-# Let's first try with a set board of size 3
+
 
 # def test_board(size: int = 0) -> list:
 
-def generate_placements(size) -> list:
-    positions = []
-    for a in range(size):
-        for b in range(size):
-            mov = []
-            mov.append(a)
-            mov.append(b)
-            positions.append(mov)
-    return positions
+
+# def generate_placements(size) -> list:
+#     positions = []
+#     for a in range(size):
+#         for b in range(size):
+#             mov = []
+#             mov.append(a)
+#             mov.append(b)
+#             positions.append(mov)
+#     return positions
 
 
 def print_board(board: list):
@@ -41,8 +42,18 @@ def print_board(board: list):
         print(f"[{row},{col}]", end="")
     print()
 
+def generate_movements(size):
+    choices = []
+    mov = []
+    for a in range(size):
+        for b in range(size):
+            mov = [a, b]
+            choices.append(mov)
+    return choices
 
-positions_example = generate_placements(5)
-print_board(positions_example)
+print_board(generate_movements(3))
+# positions_example = generate_placements(5)
+# print_board(positions_example)
+# print_board(column_comb())
 
 
