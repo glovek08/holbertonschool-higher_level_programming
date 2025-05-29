@@ -2,17 +2,6 @@
 
 from sys import argv
 
-# board_size = 0
-# result = []
-
-# if (len(argv) != 2):
-#     print("Usage: nqueens N")
-#     exit(1)
-# try:
-#     board_size = int(argv[1])
-# except Exception as error:
-#     print(error)
-# print(f"Board Size: {board_size}")
 # def test_board(size: int = 0) -> list:
 # def generate_placements(size) -> list:
 #     positions = []
@@ -85,6 +74,25 @@ def solve_n_queens(n):
             solutions.append(pos)
     return solutions
 
+
+if __name__ == "__main__":
+    if len(argv) != 2:
+        print("Usage: nqueens N")
+        exit(1)
+    try:
+        n = int(argv[1])
+        if n < 4:
+            print("N must be at least 4")
+            exit(1)
+        solutions = solve_n_queens(n)
+        for solution in solutions:
+            print(solution)
+    except ValueError:
+        print("N must be a number")
+        exit(1)
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        exit(1)
 
 # print_board(generate_movements(5))
 # print(choices_to_positions(generate_choices(4)))
