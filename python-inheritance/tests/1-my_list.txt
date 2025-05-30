@@ -1,8 +1,4 @@
-
-
-    >>> class MyList(list):
-    ...     def print_sorted(self):
-    ...         print(sorted(self))
+    >>>MyList = __import__("1_my_list").MyList
 
     >>> ml = MyList()
     >>> ml
