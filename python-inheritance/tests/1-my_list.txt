@@ -52,3 +52,7 @@
     >>> ml.append(-5)
     >>> ml.print_sorted()
     [-5, 1, 2, 7]
+
+    >>> ml = MyList([])
+    >>> ml.print_sorted()
+    []
