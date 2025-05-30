@@ -60,3 +60,14 @@
     >>> isinstance(ml.print_sorted(), list)
     True
 
+    >>> ml = MyList()
+    >>> print(ml)
+    []
+    >>> ml.append(3)
+    >>> ml.append(1)
+    >>> ml.append(4)
+    >>> ml.append(2)
+    >>> ml.print_sorted()
+    [1, 2, 3, 4]
+    >>> print(ml)
+    [3, 1, 4, 2]
