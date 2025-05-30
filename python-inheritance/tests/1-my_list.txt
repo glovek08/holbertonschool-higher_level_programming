@@ -1,0 +1,58 @@
+
+
+    >>> class MyList(list):
+    ...     def print_sorted(self):
+    ...         print(sorted(self))
+
+    >>> ml = MyList()
+    >>> ml
+    []
+    >>> type(ml).__name__
+    'MyList'
+
+    >>> ml = MyList([1, 2, 3])
+    >>> isinstance(ml, list)
+    True
+    >>> isinstance(ml, MyList)
+    True
+    >>> issubclass(MyList, list)
+    True
+
+    >>> ml = MyList([1, 2, 3])
+    >>> str(ml)
+    '[1, 2, 3]'
+    >>> ml.__str__()
+    '[1, 2, 3]'
+
+    >>> ml = MyList([1, 2])
+    >>> ml.append(3)
+    >>> ml
+    [1, 2, 3]
+    >>> ml.append(0)
+    >>> ml
+    [1, 2, 3, 0]
+
+    >>> ml = MyList([1, 2, 3])
+    >>> ml.append(4)
+    >>> ml.print_sorted()
+    [1, 2, 3, 4]
+
+    >>> ml = MyList([1, 3, 5])
+    >>> ml.append(2)
+    >>> ml.print_sorted()
+    [1, 2, 3, 5]
+    >>> ml.append(0)
+    >>> ml.print_sorted()
+    [0, 1, 2, 3, 5]
+
+    >>> ml = MyList([5, 3, 8])
+    >>> ml.append(-1)
+    >>> ml.print_sorted()
+    [-1, 3, 5, 8]
+    >>> ml.append(-10)
+    >>> ml.print_sorted()
+    [-10, -1, 3, 5, 8]
+    >>> ml = MyList([2, 7, 1])
+    >>> ml.append(-5)
+    >>> ml.print_sorted()
+    [-5, 1, 2, 7]
