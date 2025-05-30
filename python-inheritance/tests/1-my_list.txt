@@ -56,3 +56,7 @@
     >>> ml = MyList([])
     >>> ml.print_sorted()
     []
+
+    >>> isinstance(ml.print_sorted(), list)
+    True
+
