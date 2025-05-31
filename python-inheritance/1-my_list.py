@@ -13,7 +13,7 @@ class MyList(list):
         Public method that prints a given list of
             integers in sorted ascending order.
         """
-        return sorted(self)
+        print(sorted(self))
 
 # list1 = MyList()
 # list1.append(12)
