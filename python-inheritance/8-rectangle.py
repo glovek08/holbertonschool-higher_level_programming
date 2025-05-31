@@ -35,7 +35,7 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-    def area(self):
-        return self.__height * self.__width
+    # def area(self):
+    #     return self.__height * self.__width
 
 # print(issubclass(Rectangle, BaseGeometry))
