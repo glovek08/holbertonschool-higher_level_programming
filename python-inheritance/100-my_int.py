@@ -10,5 +10,6 @@ class MyInt(int):
     """
     def __eq__(self, obj2):
         return not (super().__eq__(obj2))
+
     def __ne__(self, obj2):
         return not (super().__ne__(obj2))
