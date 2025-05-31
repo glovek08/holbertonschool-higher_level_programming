@@ -9,7 +9,7 @@ class BaseGeometry:
     Creates geometric objects
     """
     def area(self):
-        raise Exception(f"{self.area.__name__}() is not implemented")
+        raise Exception("area() is not implemented")
 
     def integer_validator(self, name: str, value: int):
         """
