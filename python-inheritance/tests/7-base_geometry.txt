@@ -1,0 +1,60 @@
+>>> class BaseGeometry:
+...     def area(self):
+...         raise Exception(f"{self.area.__name__}() is not implemented")
+...     def integer_validator(self, name, value):
+...         if not isinstance(value, int):
+...             raise TypeError(f"{name} must be an integer")
+...         if value <= 0:
+...             raise ValueError(f"{name} must be greater than 0")
+...         self.name_attr = name
+...         self.value_attr = value
+
+>>> try:
+...     bg = BaseGeometry()
+...     bg.area()
+... except Exception as e:
+...     print(e)
+area() is not implemented
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("width", 100)
+>>> bg.name_attr
+'width'
+>>> bg.value_attr
+100
+
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("number", 5.5)
+... except TypeError as e:
+...     print(e)
+number must be an integer
+
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("age", "twenty")
+... except TypeError as e:
+...     print(e)
+age must be an integer
+
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("height", 0)
+... except ValueError as e:
+...     print(e)
+height must be greater than 0
+
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("score", -5)
+... except ValueError as e:
+...     print(e)
+score must be greater than 0
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("first_val", 1)
+>>> bg.integer_validator("second_val", 999)
+>>> bg.name_attr
+'second_val'
+>>> bg.value_attr
+999
