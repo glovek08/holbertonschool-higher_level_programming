@@ -10,7 +10,7 @@ class BaseGeometry:
     """
     def area(self):
         raise Exception(f"{self.area.__name__}() is not implemented")
-    
+
     def integer_validator(self, name: str, value: int):
         """
         Validate that a given value is a positive integer
@@ -20,6 +20,7 @@ class BaseGeometry:
         elif value <= 0:
             raise ValueError(f"{name} must be greater than 0")
         return True
+
 
 class Rectangle(BaseGeometry):
     """
@@ -33,8 +34,8 @@ class Rectangle(BaseGeometry):
         self.integer_validator("height", height)
         self.__width = width
         self.__height = height
-    
+
     def area(self):
         return self.__height * self.__width
 
-print(issubclass(Rectangle, BaseGeometry))
+# print(issubclass(Rectangle, BaseGeometry))
