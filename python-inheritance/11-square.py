@@ -6,6 +6,13 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
+    """
+    Creates a Square object using Rectangle as the parent class
+    and BaseGeometry as the base class.
+    Attributes:
+        (int) size: the size of the square
+    """
+
     def __init__(self, size: int):
         self.integer_validator("size", size)
         self.__size = size
