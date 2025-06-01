@@ -51,7 +51,7 @@ class Rectangle(Shape):
         self.is_neg = width < 0 or height < 0
 
     def area(self) -> float:
-        if is_neg:
+        if self.is_neg:
             return (self.width * self.height) * -1
         return (self.width * self.height)
 
