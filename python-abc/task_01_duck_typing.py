@@ -28,7 +28,7 @@ class Circle(Shape):
     Arguments:
         (int, float) radius: the circle's radius
     """
-    def __init__(self, radius: int | float):
+    def __init__(self, radius: int):
         self.radius = radius
 
     def area(self) -> float:
@@ -46,7 +46,7 @@ class Rectangle(Shape):
         (int, float) width: the rectangle's width.
         (int, float) height: the rectangle's height.
     """
-    def __init__(self, width: int | float, height: int | float):
+    def __init__(self, width: int, height: int):
         self.width = width
         self.height = height
 
