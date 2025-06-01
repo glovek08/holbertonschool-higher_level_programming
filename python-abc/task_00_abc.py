@@ -18,7 +18,7 @@ class Dog(Animal):
     """
     Subclass of Animal that defines a Dog with his onomatopoeia
     """
-    def sound():
+    def sound(self):
         """
         Returns the sound made by a dog.
         """
@@ -29,7 +29,7 @@ class Cat(Animal):
     """
     Subclass of Animal that defines a cat with his onomatopoeia
     """
-    def sound():
+    def sound(self):
         """
         Returns the sound made by a dog.
         """
