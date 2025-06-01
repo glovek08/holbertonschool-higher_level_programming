@@ -46,14 +46,14 @@ class Rectangle(Shape):
         (int, float) height: the rectangle's height.
     """
     def __init__(self, width: int, height: int):
-        self.width = width
-        self.height = height
+        self.width = abs(width)
+        self.height = abs(height)
 
     def area(self) -> float:
         return (self.width * self.height)
 
     def perimeter(self) -> float:
-        return 2 * (abs(self.height) + abs(self.width))
+        return 2 * (self.width + self.height)
 
 
 def shape_info(geometric_object):
