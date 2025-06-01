@@ -49,6 +49,10 @@ class Rectangle(Shape):
         (int, float) height: the rectangle's height.
     """
     def __init__(self, width: int, height: int):
+        if width < 0:
+            width * -1
+        elif height < 0:
+            height * -1
         self.width = width
         self.height = height
 
