@@ -30,7 +30,7 @@ class Circle(Shape):
     """
     def __init__(self, radius: int):
         if radius < 0:
-            raise ValueError("Radius can't be negative")
+            radius * -1
         self.radius = radius
 
     def area(self) -> float:
