@@ -48,8 +48,11 @@ class Rectangle(Shape):
     def __init__(self, width: int, height: int):
         self.width = abs(width)
         self.height = abs(height)
+        self.is_neg = width < 0 or height < 0
 
     def area(self) -> float:
+        if is_neg:
+            return (self.width * self.height) * -1
         return (self.width * self.height)
 
     def perimeter(self) -> float:
