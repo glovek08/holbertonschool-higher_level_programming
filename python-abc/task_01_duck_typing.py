@@ -29,10 +29,7 @@ class Circle(Shape):
         (int, float) radius: the circle's radius
     """
     def __init__(self, radius: int):
-        if radius < 0:
-            radius * -1
-        self.radius = radius
-
+        self.radius = abs(radius)
     def area(self) -> float:
         return (math.pi * (self.radius ** 2))
 
@@ -49,12 +46,8 @@ class Rectangle(Shape):
         (int, float) height: the rectangle's height.
     """
     def __init__(self, width: int, height: int):
-        if width < 0:
-            width * -1
-        elif height < 0:
-            height * -1
-        self.width = width
-        self.height = height
+        self.width = abs(width)
+        self.height = abs(height)
 
     def area(self) -> float:
         return (self.width * self.height)
