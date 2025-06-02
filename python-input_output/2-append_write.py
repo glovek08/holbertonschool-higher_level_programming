@@ -16,7 +16,7 @@ def append_write(filename="", input_text=""):
     try:
         with open(filename, mode="a", encoding="utf-8") as a_file:
             bytes_written = a_file.write(input_text)
-    except Exception as error:
+    except (Exception, PermissionError) as error:
         print(error)
         return 0
     return bytes_written
