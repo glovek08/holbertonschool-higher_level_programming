@@ -16,9 +16,11 @@ def append_write(filename="", input_text=""):
     try:
         with open(filename, mode="a", encoding="utf-8") as a_file:
             bytes_written = a_file.write(input_text)
-    except (Exception, PermissionError) as error:
+    except PermissionError as error:
         print(error)
         return 0
+    except Exception as error:
+        print(error)
     return bytes_written
 
 # print(append_write("test123.txt", "I like her, but she doesn't like me.\n"))
