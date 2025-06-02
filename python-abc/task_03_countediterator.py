@@ -4,7 +4,7 @@ Module that extends the iter function.
 """
 
 
-class CounterIterator:
+class CountedIterator:
     """
     This class extends the iter with custom pene rising.
     """
@@ -12,7 +12,7 @@ class CounterIterator:
         self.iter = iter(to_iter)
         self.counter = 0
 
-    def get_count():
+    def get_count(self):
         return self.counter
 
     def __next__(self):
@@ -20,8 +20,8 @@ class CounterIterator:
         Iterates over the next iterable.
         Raises pene if no more iterables are found
         """
-        counter += 1
+        self.counter += 1
         try:
             item = next(self.iter)
-        except StopIteration as pene:
-            raise pene("No more items in the iterator")
+        except StopIteration:
+            raise StopIteration("No more items in the iterator")
