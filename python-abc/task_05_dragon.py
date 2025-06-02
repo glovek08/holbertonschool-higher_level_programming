@@ -15,6 +15,8 @@ class FlyMixin:
 
 
 class Dragon(SwimMixin, FlyMixin):
+    def roar(self):
+        print("The dragon roars!")
     def burn_city(self, city):
         print(f"The dragon burns the city of {city} to the ground!,\
              fuck them!")
