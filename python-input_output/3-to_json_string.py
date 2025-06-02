@@ -16,6 +16,6 @@ def to_json_string(my_obj):
     try:
         return json.dumps(my_obj)
     except TypeError:
-        raise TypeError
+        raise TypeError("Object of type set is not JSON serializable")
     except Exception as error:
         raise Exception
