@@ -17,7 +17,7 @@ def append_write(filename="", input_text=""):
         with open(filename, mode="a", encoding="utf-8") as a_file:
             bytes_written = a_file.write(input_text)
     except PermissionError as error:
-        raise PermissionError
+        raise PermissionError("[Errno 13] Permission denied: 'no_perm/o_file'")
     except Exception as error:
         print(error)
     return bytes_written
