@@ -18,7 +18,6 @@ def append_write(filename="", input_text=""):
             bytes_written = a_file.write(input_text)
     except PermissionError as error:
         print(f"[PermissionError] {error}")
-        return 0
     except Exception as error:
         print(error)
     return bytes_written
