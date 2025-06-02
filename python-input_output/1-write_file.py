@@ -14,7 +14,7 @@ def write_file(filename="", input_text=""):
     with open(filename, mode="w", encoding="utf-8") as a_file:
         try:
             # print(a_file.writable())
-            a_file.write(input_text)
+            a_file.write(r"{input_text}")
         except Exception as error:
             print(error)
 
