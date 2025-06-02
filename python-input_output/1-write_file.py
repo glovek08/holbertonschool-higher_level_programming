@@ -14,10 +14,10 @@ def write_file(filename="", input_text=""):
     with open(filename, mode="w", encoding="utf-8") as a_file:
         try:
             # print(a_file.writable())
-            characters_writte = a_file.write(input_text)
+            characters_written = a_file.write(input_text)
         except Exception as error:
             print(error)
             return 0
-        return characters_writte
+        return characters_written
 
 # write_file("test123.txt", "Holberton School is so cool!\n")
