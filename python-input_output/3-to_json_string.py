@@ -15,5 +15,7 @@ def to_json_string(my_obj):
     """
     try:
         return json.dumps(my_obj)
+    except TypeError:
+        raise TypeError
     except Exception as error:
-        print(error)
+        raise Exception
