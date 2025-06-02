@@ -6,7 +6,7 @@ Module that extends the iter function.
 
 class CountedIterator:
     """
-    This class extends the iter with custom pene rising.
+    Custom iter implementation.
     """
     def __init__(self, to_iter):
         self.iter = iter(to_iter)
@@ -15,13 +15,13 @@ class CountedIterator:
     def get_count(self):
         return self.counter
 
+    def __iter__(self):
+        return self
+
     def __next__(self):
-        """
-        Iterates over the next iterable.
-        Raises pene if no more iterables are found
-        """
-        self.counter += 1
         try:
             item = next(self.iter)
+            self.counter += 1
+            return item
         except StopIteration:
-            raise StopIteration("No more items in the iterator")
+            raise
