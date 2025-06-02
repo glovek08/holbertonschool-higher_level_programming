@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module with function that reads from text file and outputes
+Module with function that reads from text file and outputs
 to standard output
 """
 
