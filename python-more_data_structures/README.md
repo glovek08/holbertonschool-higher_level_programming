@@ -1,1 +1,10 @@
-**0-square_matrix_simple.py**: naive matrix multiplication.
+- **0-square_matrix_simple.py**: Returns a new matrix with the square of all values from the original matrix.
+- **1-search_replace.py**: Replaces all occurrences of a specific element in a list with another value.
+- **2-uniq_add.py**: Adds all unique integers in a list (only once for each integer).
+- **3-common_elements.py**: Returns a set of common elements between two sets.
+- **4-only_diff_elements.py**: Returns a set of elements present in only one of the sets.
+- **5-number_keys.py**: Returns the number of keys in a dictionary.
+- **6-print_sorted_dictionary.py**: Prints a dictionary by ordered keys.
+- **7-update_dictionary.py**: Replaces or adds key/value in a dictionary.
+- **10-best_score.py**: Returns the key with the biggest integer value in a dictionary.
+- **11-multiply_list_map.py**: Multiplies all values in a list by a number using `map`.
