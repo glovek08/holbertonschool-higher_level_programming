@@ -1,2 +1,14 @@
-**0-lookup.py**: retrieves a list of all methods from a given objects
-
+- **0-lookup.py**: Defines a function `lookup` that returns the list of available attributes and methods of an object.
+- **1-my_list.py**: Defines a `MyList` class that inherits from `list` and provides a `print_sorted()` method to print the list in sorted order.
+- **2-is_same_class.py**: Function to check if an object is exactly an instance of a specified class (not considering inheritance).
+- **3-is_kind_of_class.py**: Function to check if an object is an instance of, or inherited from, a specified class.
+- **4-inherits_from.py**: Function to check if an object is an instance of a subclass of a specified class (but not the class itself).
+- **5-base_geometry.py**: Defines an empty `BaseGeometry` class to serve as a base for geometry classes.
+- **6-base_geometry.py**: Extends `BaseGeometry` by adding an `area()` method that raises an Exception; meant to be implemented by subclasses.
+- **7-base_geometry.py**: Defines `BaseGeometry` class with integer validation and an abstract `area()` method.
+- **8-rectangle.py**: Defines a `Rectangle` class inheriting from `BaseGeometry` with initialization and area calculation.
+- **9-rectangle.py**: Extends `Rectangle` class with improved string representation and area calculation.
+- **10-square.py**: Defines a `Square` class inheriting from `Rectangle` (and ultimately `BaseGeometry`), with size validation and area calculation.
+- **11-square.py**: Further extends `Square` with custom string representation and area computation.
+- **100-my_int.py**: Defines a `MyInt` class that inherits from `int` but inverts the behavior of `==` and `!=` operators.
+- **101-add_attribute.py**: Function that attempts to add a new attribute to an object at runtime; raises a `TypeError` if not possible.
