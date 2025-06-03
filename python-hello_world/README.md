@@ -8,8 +8,3 @@
 - **7-edges.py**: Prints specific parts of a given string using slicing.
 - **8-concat_edges.py**: Prints a concatenated new string from parts of another string.
 - **9-easter_egg.py**: Prints “The Zen of Python” by Tim Peters.
-- **10-check_cycle.c**: Checks if a singly linked list has a cycle.
-- **lists.h**: Header file containing the definition of the list structure used in `10-check_cycle.c`.
-- **100-write.py**: Prints a message to standard error.
-- **101-compile**: Shell script to compile Python files to bytecode.
-- **102-magic_calculation.py**: Implementation of a calculation function based on provided bytecode.
