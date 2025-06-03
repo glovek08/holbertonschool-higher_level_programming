@@ -1,1 +1,11 @@
-TBD
+- **0-square.py**: Defines an empty `Square` class.
+- **1-square.py**: Adds a private size attribute, with input validation.
+- **2-square.py**: Adds area computation as a method.
+- **3-square.py**: Uses property decorators for size, with getter and setter.
+- **4-square.py**: Allows size modification and validation after object creation.
+- **5-square.py**: Implements printing of the square using `#` characters.
+- **6-square.py**: Adds `position` attribute to determine print offset.
+- **100-singly_linked_list.py**: Implements a singly linked list and node classes.
+- **101-square.py**: Customizes `__str__` and `__repr__` for pretty-printing.
+- **102-square.py**: Adds rich comparison methods for `Square` objects.
+- **103-magic_class.py**: Demonstrates use of the `math` module and magic methods.
