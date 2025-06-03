@@ -14,7 +14,7 @@ def load_from_json_file(filename):
     """
     with open(filename, mode="r", encoding="utf-8") as a_file:
         try:
-            new_obj = json.load(filename)
+            new_obj = json.load(a_file)
         except Exception as error:
             raise error
     return new_obj
