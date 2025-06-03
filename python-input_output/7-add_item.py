@@ -14,5 +14,15 @@ filename = 'add_item.json'
 my_list = argv[1:]
 # print(my_list)
 
+try:
+    list_exists = JSON_load(filename)
+except FileNotFoundError:
+    list_exists = []
+except json.JSONDecodeError:
+    # File not JSON
+    list_exists = []
+
+list_exists.extend(my_list)
+
 JSON_save(my_list, filename)
 JSON_load(filename)
