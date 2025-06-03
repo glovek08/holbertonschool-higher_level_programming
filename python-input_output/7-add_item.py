@@ -24,5 +24,5 @@ except json.JSONDecodeError:
 
 list_exists.extend(my_list)
 
-JSON_save(my_list, filename)
+JSON_save(list_exists, filename)
 JSON_load(filename)
