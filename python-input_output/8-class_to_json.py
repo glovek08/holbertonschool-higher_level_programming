@@ -2,7 +2,6 @@
 """
 I'll deal with documentation later
 """
-import json
 # MyClass2 = __import__('8-my_class_2').MyClass
 
 # obj2 = MyClass2('Pedro', 65)
@@ -11,7 +10,7 @@ import json
 
 
 def class_to_json(obj):
-    return json.dumps(obj.__dict__)
+    return obj.__dict__
 
 # class_to_json(uruguay)
 # class Country:
