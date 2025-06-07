@@ -23,5 +23,6 @@ class Student():
         return my_dict
 
     def reload_from_json(self, json: dict):
-        for key, value in json:
-            self.__dict__[key] = value
+        for key, value in json.items():
+            if hasattr(self, key):
+                setattr(self, key, value)
