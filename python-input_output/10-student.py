@@ -8,8 +8,8 @@ the JSON string.
 
 class Student():
     def __init__(self, first_name: str = "n/a",
-                last_name: str = "n/a",
-                age: int = 0):
+                 last_name: str = "n/a",
+                 age: int = 0):
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
