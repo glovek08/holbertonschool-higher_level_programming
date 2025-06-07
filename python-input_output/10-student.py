@@ -6,7 +6,7 @@ the JSON string.
 """
 
 
-class Student(Student):
+class Student():
     def __init__(self, first_name: str = "n/a",
                 last_name: str = "n/a",
                 age: int = 0):
