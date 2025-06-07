@@ -2,7 +2,6 @@
 """
 I'll deal with documentation later
 """
-# MyClass2 = __import__('8-my_class_2').MyClass
 
 # obj2 = MyClass2('Pedro', 65)
 
