@@ -10,7 +10,7 @@ def convert_csv_to_json(filename: str):
     if isinstance(filename, str):
         for_json = []
         try:
-            with open(filename, mode="r", encoding="utf-8") as csv_file:
+            with open(filename, mode="r") as csv_file:
                 csv_reader = csv.DictReader(csv_file)
                 for row in csv_reader:
                     for_json.append(row)
@@ -24,7 +24,7 @@ def convert_csv_to_json(filename: str):
             print(f"Unexpected error: {error}")
             return False
         try:
-            with open(filename, mode="w", encoding="utf-8") as json_file:
+            with open(filename, mode="w") as json_file:
                 json.dump(for_json, json_file, indent=4)
         except (AttributeError, TypeError, pickle.PicklingError) as error:
             print(f"Object cannot be serialized: {error}")
