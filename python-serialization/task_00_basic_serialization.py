@@ -8,7 +8,7 @@ from os import path
 
 
 def serialize_and_save_to_file(data, filename):
-    if (isinstance(filename, str)) and path.exists(filename):
+    if (isinstance(filename, str)):
         try:
             with open(filename, mode="wb") as a_file:
                 pickle.dump(data, a_file)
