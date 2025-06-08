@@ -8,7 +8,7 @@ import pickle
 
 def serialize_and_save_to_file(data, filename):
     try:
-        with open(filename, encoding="utf-8", mode="wb") as a_file:
+        with open(filename, mode="wb") as a_file:
             pickle.dump(data, a_file)
     except Exception as error:
         print(error)
@@ -16,7 +16,7 @@ def serialize_and_save_to_file(data, filename):
 
 def load_and_deserialize(filename):
     try:
-        with open(filename, encoding="utf-8", mode="rb") as a_file:
-            return picke.loads(filename)
+        with open(filename, mode="rb") as a_file:
+            return pickle.loads(filename)
     except Exception as error:
         print(error)
