@@ -22,7 +22,7 @@ class CustomObject:
             try:
                 with open(filename, mode="wb") as a_file:
                     pickle.dump(self, a_file)
-                return True  # Indicate success
+                return True
             except (AttributeError, TypeError, pickle.PicklingError) as error:
                 print(f"Object cannot be serialized: {error}")
                 return None
