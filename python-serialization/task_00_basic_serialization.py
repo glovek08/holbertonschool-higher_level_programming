@@ -12,6 +12,8 @@ def serialize_and_save_to_file(data, filename):
         try:
             with open(filename, mode="wb") as a_file:
                 pickle.dump(data, a_file)
+        except OSError as error:
+            raise error
         except Exception:
             raise Exception
 
@@ -21,5 +23,7 @@ def load_and_deserialize(filename):
         try:
             with open(filename, mode="rb") as a_file:
                 return pickle.load(a_file)
+        except OSError as error:
+            raise error
         except Exception:
             raise Exception
