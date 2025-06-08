@@ -17,6 +17,6 @@ def serialize_and_save_to_file(data, filename):
 def load_and_deserialize(filename):
     try:
         with open(filename, mode="rb") as a_file:
-            return pickle.loads(filename)
+            return pickle.load(a_file)
     except Exception as error:
         print(error)
