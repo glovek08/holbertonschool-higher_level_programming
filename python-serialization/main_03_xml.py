@@ -3,7 +3,7 @@ from task_03_xml import serialize_to_xml, deserialize_from_xml
 
 def main():
     sample_dict = {
-        'name': 'Johnny',
+        'name': 'John',
         'age': '28',
         'city': 'New York'
     }
