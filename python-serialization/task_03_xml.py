@@ -25,6 +25,10 @@ def serialize_to_xml(dictionary, filename):
             tree.write(filename, encoding="utf-8")
         except Exception as e:
             print(f"Error writing XML to file: {e}")
+    else:
+        print("Invalid input: 'dictionary' must be a dict\
+            and 'filename' must be a string.")
+
 
 def deserialize_from_xml(filename):
     pass
