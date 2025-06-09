@@ -5,6 +5,7 @@ as an alternative format to JSON.
 """
 import xml.etree.ElementTree as ET
 from os import path
+from typing import Optional
 
 
 def serialize_to_xml(dictionary, filename):
@@ -30,7 +31,7 @@ def serialize_to_xml(dictionary, filename):
             and 'filename' must be a string.")
 
 
-def deserialize_from_xml(filename: str) -> dict | None:
+def deserialize_from_xml(filename: str) -> Optional[dict]:
     if not isinstance(filename, str):
         print(f"{__name__}")
         return None
