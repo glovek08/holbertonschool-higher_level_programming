@@ -10,8 +10,7 @@ from typing import Optional
 
 def serialize_to_xml(dictionary, filename):
     if isinstance(dictionary, dict)\
-            and isinstance(filename, str)\
-            and path.exists(filename):
+            and isinstance(filename, str):
         # with open(filename, 'r', encoding='utf-8') as file:
         #     content = file.read()
         #     print(content)
