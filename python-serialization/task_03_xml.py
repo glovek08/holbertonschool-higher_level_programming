@@ -6,6 +6,7 @@ as an alternative format to JSON.
 import xml.etree.ElementTree as ET
 from os import path
 from typing import Optional
+import collections
 
 
 def serialize_to_xml(dictionary, filename):
