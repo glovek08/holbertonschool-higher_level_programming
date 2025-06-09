@@ -12,9 +12,9 @@ def main():
     serialize_to_xml(sample_dict, xml_file)
     print(f"Dictionary serialized to {xml_file}")
 
-    # deserialized_data = deserialize_from_xml(xml_file)
-    # print("\nDeserialized Data:")
-    # print(deserialized_data)
+    deserialized_data = deserialize_from_xml(xml_file)
+    print("\nDeserialized Data:")
+    print(deserialized_data)
 
 if __name__ == "__main__":
     main()

@@ -38,19 +38,19 @@ def deserialize_from_xml(filename: str) -> Optional[dict]:
     if not path.exists(filename):
         print(f"[{__name__}] CRITICAL ERROR: '{filename}")
         return None
-    obj_reconstructed_associative_array = collections.OrderedDict()
+    obj_array = collections.OrderedDict()
     try:
-        obj_xml_tree_representation = ET.parse(filename)
-        obj_xml_root_element = obj_xml_tree_representation.getroot()
-        for obj_child_element in obj_xml_root_element:
+        obj_tree = ET.parse(filename)
+        obj_root = obj_tree.getroot()
+        for obj_child_element in obj_root:
             str_element_tag = obj_child_element.tag
             str_element_text_content = obj_child_element.text
-            obj_reconstructed_associative_array[str_element_tag] = str_element_text_content
-        return dict(obj_reconstructed_associative_array)
-    except ET.ParseError as obj_parse_exception:
-        print(f"[{__name__}] XML fucked up: {filename} {obj_parse_exception}")
+            obj_array[str_element_tag] = str_element_text_content
+        return dict(obj_array)
+    except ET.ParseError as obj_parse_error:
+        print(f"[{__name__}] XML fucked up: {filename} {obj_parse_error}")
         return None
-    except Exception as obj_generic_exception:
+    except Exception as error:
         print(
-            f"[{__name__}] Something else got fucked up: {filename} {obj_generic_exception}")
+            f"[{__name__}] Something else got fucked up: {filename} {error}")
         return None
