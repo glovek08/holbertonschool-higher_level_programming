@@ -5,14 +5,13 @@ Module to practice working with requests library
 import requests
 import json
 import csv
-import urllib.error
 
 
 def fetch_and_print_posts():
     try:
         r = requests.get("https://jsonplaceholder.typicode.com/posts")
         r.raise_for_status()
-    except HTTPError as request_error:
+    except Exception as request_error:
         print(request_error)
         exit()
     print(f"Status Code: {r.status_code}")
