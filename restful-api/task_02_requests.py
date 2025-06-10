@@ -5,6 +5,7 @@ Module to practice working with requests library
 import requests
 import json
 import csv
+import urllib.error
 
 
 def fetch_and_print_posts():
