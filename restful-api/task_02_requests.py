@@ -31,7 +31,7 @@ def fetch_and_save_posts():
     try:
         r = requests.get("https://jsonplaceholder.typicode.com/posts")
         r.raise_for_status()
-    except HTTPError as request_error:
+    except Exception as request_error:
         print(request_error)
         exit()
     if (r.status_code == 200):
