@@ -7,7 +7,7 @@ import requests
 import json
 
 
-HOST = "192.168.1.90"
+HOST = "localhost"
 PORT = 8000
 
 class NeuralHTTP(BaseHTTPRequestHandler):
