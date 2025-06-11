@@ -23,6 +23,7 @@ class NeuralHTTP(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-type", "text/html")
             self.end_headers()
+            self.wfile.write(bytes("OK", "utf-8"))
         #throwing json info on info endpoint
         elif self.path == "/info":
             try:
