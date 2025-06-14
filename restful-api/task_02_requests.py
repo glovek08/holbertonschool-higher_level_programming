@@ -23,6 +23,7 @@ def fetch_and_print_posts():
             exit()
         for key in json_obj:
             print(f"{key['title']}")
+        
 
 # fetch_and_print_posts()
 
