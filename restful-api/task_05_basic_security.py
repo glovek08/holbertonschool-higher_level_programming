@@ -6,23 +6,35 @@ from werkzeug.security import generate_password_hash, check_password_hash
 app = Flask(__name__)
 auth = HTTPBasicAuth()
 
+
 users = {
-    "sofi": generate_password_hash("sofiIsCuteAF"),
-    "fede": generate_password_hash("fedePlaysGuitar"),
+    "user1": {
+        "username": "user1",
+        "password": generate_password_hash("password"),
+        "role": "user",
+    },
+    "admin1": {
+        "username": "admin1",
+        "password": generate_password_hash("password"),
+        "role": "admin",
+    },
 }
+
 
 @auth.verify_password
 def verify_password(username, password):
-    if username in users and check_password_hash(users.get(username), password):
+    if username in users and check_password_hash(users[username]["password"], password):
         return username
 
-@app.route('/')
+
+@app.route("/basic-protected")
 @auth.login_required
 def index():
     return "Hello, {}!".format(auth.current_user())
 
-if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0", port=5000)
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=8000)
 
 
 # app = Flask(__name__)
