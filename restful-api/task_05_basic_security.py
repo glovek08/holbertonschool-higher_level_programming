@@ -27,10 +27,15 @@ def verify_password(username, password):
         return username
 
 
+@app.route("/")
+def home():
+    return "Home!"
+
+
 @app.route("/basic-protected")
 @auth.login_required
 def index():
-    return "Hello, {}!".format(auth.current_user())
+    return "Basic Auth: Access Granted"
 
 
 if __name__ == "__main__":
