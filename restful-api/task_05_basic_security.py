@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 from flask import Flask, jsonify
-from flask_httpauth import HTTPBasicAuth
+from flask_httpauth import HTTPBasicAuth, HTTPTokenAuth
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
+auth = HTTPTokenAuth(scheme="Bearer")
 
 
 users = {
@@ -38,27 +39,26 @@ def index():
     return "Basic Auth: Access Granted"
 
 
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=8000)
+tokens = {
+    "secret-token-1": "john",
+    "secret-token-2": "susan",
+}
 
 
-# app = Flask(__name__)
-# auth = HTTPTokenAuth(scheme="Bearer")
+@auth.verify_token
+def verify_token(token):
+    if token in tokens:
+        return tokens[token]
 
-# tokens = {
-#     'secret-token-1': 'john',
-#     'secret-token-2': 'susan',
-# }
 
-# @auth.verify_token
-# def verify_token(token):
-#     if token in tokens:
-#         return tokens[token]
+@app.route("/")
+@auth.login_required
+def index():
+    return "Hello, {}!".format(auth.current_user())
 
-# @app.route('/')
-# @auth.login_required
-# def index():
-#     return "Hello, {}!".format(auth.current_user())
 
 # if __name__ == '__main__':
 #     app.run()
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=8000)
