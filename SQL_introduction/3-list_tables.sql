@@ -1,0 +1,2 @@
+-- @block
+SHOW tables;
