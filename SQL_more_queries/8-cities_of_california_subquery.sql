@@ -1,5 +1,5 @@
 -- @block
 USE `hbtn_0d_usa`;
-SELECT id, state_id, name
-FROM `cities`
-ORDER BY id ASC;
+SELECT cities.id, cities.state_id, cities.name
+FROM cities, states
+WHERE cities.state_id = states.id;
