@@ -1,8 +1,8 @@
 -- @block
 
 SELECT
-	tv_genres.name AS '<TV Show genre>',
-	COUNT(tv_show_genres.show_id) AS '<Number of shows linked to this genre>'
+	tv_genres.name AS 'genre',
+	COUNT(tv_show_genres.show_id) AS 'number_of_shows'
 FROM 
 	tv_genres,
 	tv_show_genres
