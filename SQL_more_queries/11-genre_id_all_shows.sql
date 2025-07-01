@@ -1,3 +1,4 @@
+-- @block
 
 SELECT
 	tv_genres.name AS '<TV Show genre>',
