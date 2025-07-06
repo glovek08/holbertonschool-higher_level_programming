@@ -42,6 +42,7 @@ Raises:
 from sys import argv, exit
 import MySQLdb
 
+
 def get_state_by_name(argv):
     try:
         db = MySQLdb.connect(
@@ -62,7 +63,7 @@ def get_state_by_name(argv):
             ORDER BY cities.id ASC", (argv[4],))
         cities = []
         for row in cur.fetchall():
-             cities.append(row[0])
+            cities.append(row[0])
         print(", ".join(cities))
     except MySQLdb.Error as fetch_error:
         try:
@@ -73,6 +74,7 @@ def get_state_by_name(argv):
     finally:
         cur.close()
         db.close()
+
 
 if __name__ == "__main__":
     if len(argv) != 5:
