@@ -48,7 +48,8 @@ if __name__ == "__main__":
             print(f"Connection failed: {conn_error}")
         cur = db.cursor()
         try:
-            query = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC"
+            query = "SELECT * FROM states WHERE\
+                name LIKE BINARY 'N%' ORDER BY id ASC"
             cur.execute(query)
             rows = cur.fetchall()
         except MySQLdb.Error as fetch_error:
