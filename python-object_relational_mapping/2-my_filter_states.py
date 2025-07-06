@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 # fmt: off
 """
 This script connects to a MySQL database and retrieves all states
