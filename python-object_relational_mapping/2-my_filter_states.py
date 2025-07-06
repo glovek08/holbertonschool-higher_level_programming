@@ -2,9 +2,9 @@
 # fmt: off
 """
 This script connects to a MySQL database and retrieves all states
-from the 'states' table where the name matches the provided argument.
-The script is vulnerable to SQL injection attacks as it uses string
-formatting to construct the SQL query.
+from the 'states' table where the name exactly matches the provided argument
+(case-sensitive).
+This script uses parameterized queries to prevent SQL injection.
 
 Usage:
     ./2-my_filter_states.py <username> <password> <database> <state_name>
@@ -13,25 +13,23 @@ Arguments:
     username    MySQL database username
     password    MySQL database password
     database    Name of the MySQL database to connect to
-    state_name  Name of the state to search for (exact match)
+    state_name  Name of the state to search for (exact case-sensitive match)
 
 Functionality:
     - Establishes a connection to a MySQL database using MySQLdb.
     - Executes a SELECT query to fetch all rows from the 'states' table
-      where the name exactly matches the provided argument.
+      where the name exactly matches the provided argument (case-sensitive).
     - Results are ordered by 'id' in ascending order.
     - Prints each matching row as a tuple.
 
 Example usage:
-    ./2-my_filter_states.py root password hbtn_0e_0_usa 'Arizona'
+    ./2-my_filter_states.py root password hbtn_0e_0_usa 'Nevada'
 
 Example output:
-    (3, 'Arizona')
+    (3, 'Nevada')
 
-Security Warning:
-    This script is vulnerable to SQL injection attacks because it uses
-    string formatting to construct SQL queries. Use parameterized queries
-    in production code.
+Security:
+    This script uses parameterized queries to prevent SQL injection attacks.
 
 Raises:
     ValueError: If the number of command-line arguments is incorrect.
@@ -59,8 +57,8 @@ def fetch_by_name(argv):
         # in the states table of hbtn_0e_0_usa
         # where name matches the argument.
         cur.execute("SELECT * FROM states\
-                WHERE states.name = %s\
-                ORDER BY id ASC", (argv[4],))
+                    WHERE states.name REGEXP %s\
+                    ORDER BY id ASC", (argv[4],))
         rows = cur.fetchall()
         for row in rows:
             print(row)
