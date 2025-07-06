@@ -16,7 +16,8 @@ Functionality:
     - Establishes a connection to a MySQL database using SQLAlchemy ORM.
     - Creates a session to interact with the database.
     - Queries the first State object from the states table (ordered by id).
-    - Prints the state in the format: "id: name" or "Nothing" if no states exist.
+    - Prints the state in the format: "id: name"
+        or "Nothing" if no states exist.
     - Properly handles database connections and sessions with error handling.
 
 Example usage:
@@ -24,7 +25,7 @@ Example usage:
 
 Example output:
     1: California
-    
+
     OR if no states exist:
     Nothing
 
