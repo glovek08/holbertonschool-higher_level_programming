@@ -64,10 +64,7 @@ def get_first_state(mysql_user: str,
                     mysql_passwd: str,
                     mysql_db: str):
     try:
-        # Use var to store the url cause pycode's 80 line limit's been a bitch
-        url = f"mysql+mysqldb://{mysql_user}:\
-            {mysql_passwd}@localhost:3306/{mysql_db}"
-        engine = create_engine(url)
+        engine = create_engine(f"mysql+mysqldb://{mysql_user}:{mysql_passwd}@localhost:3306/{mysql_db}")  # noqa: E501
     except SQLAlchemyError as engine_error:
         raise RuntimeError(f"Failed to create engine: {engine_error}")
     Session = sessionmaker(bind=engine)
