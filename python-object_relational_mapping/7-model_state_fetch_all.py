@@ -62,8 +62,7 @@ def list_states_objs(mysql_username: str,
                      mysql_database: str):
     try:
         engine = create_engine(
-            f"mysql+pymysql://{mysql_username}:{mysql_passwd}@\
-                localhost:3306/{mysql_database}"
+            f"mysql+mysqldb://{mysql_username}:{mysql_passwd}@localhost:3306/{mysql_database}"
         )
     except SQLAlchemyError as e:
         raise RuntimeError(f"Failed to create engine: {e}")
