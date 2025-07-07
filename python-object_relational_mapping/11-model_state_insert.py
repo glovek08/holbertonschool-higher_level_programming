@@ -71,7 +71,7 @@ def insert_louisiana(
     try:
         session.add(new_state)
         session.commit()
-        print("State of Louisiana added correctly!")
+        print(new_state.id)
     except SQLAlchemyError as query_error:
         print(f"Couldn't add resource: {query_error}")
         return
