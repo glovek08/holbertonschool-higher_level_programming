@@ -29,4 +29,4 @@ class State(Base):
     name: Mapped[str] = mapped_column(String(128), nullable=False)
 
     def __repr__(self) -> str:
-        return f"<State(id={self.id}, name='{self.name}')>"
+        return f"<State(id={self.id}, name='{self.name!r}')>"
