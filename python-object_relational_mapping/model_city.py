@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 # fmt: off
-
+"""
+This module defines the City class for SQLAlchemy ORM.
+Contains the class definition of a City.
+"""
 from model_state import Base
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import ForeignKey, String
