@@ -1,10 +1,9 @@
 #!/usr/bin/node
-const n = +process.argv[2];
-if (!Number.isInteger(n) || n < 1) {
+let times = process.argv[2];
+if (isNaN(times)) {
   console.log('Missing number of occurrences');
   process.exit(1);
 }
-// precomputing
-const line = 'C is fun\n';
-const output = line.repeat(n);
-process.stdout.write(output);
+for (times; times > 0; times--) {
+  console.log('C is fun');
+}
