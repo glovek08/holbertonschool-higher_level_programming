@@ -7,7 +7,7 @@ if (isNaN(n)) {
   process.exit(1);
 }
 let sqLen = n;
-const SYMBOL = 'x';
+const SYMBOL = 'X';
 const LINE = `${SYMBOL.repeat(sqLen)}\n`;
 
 while (sqLen !== 0) {
