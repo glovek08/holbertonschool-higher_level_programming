@@ -1,9 +1,14 @@
 /*
-Write a JavaScript script that updates the text of the header element to New Header!!!
-when the user clicks on the element with id update_header
+Write a JavaScript script that adds a li element to a list when the user clicks on the element
+with id add_item:
+The new element must be: <li>Item</li>
+The new element must be added to the ul element with class my_list
 */
 
-const header = document.querySelector("header");
-const update_header = document.querySelector("#update_header");
+const add_item = document.querySelector("#add_item")
 
-update_header.addEventListener("click", () => header.innerText = "New Header!!!");
+add_item.addEventListener("click", () => {
+  const new_li = document.createElement("li");
+  new_li.textContent = "Item";
+  document.querySelector(".my_list").appendChild(new_li);
+});
