@@ -15,15 +15,9 @@ if (!header.classList.contains("red") && !header.classList.contains("green")) {
   header.classList.add("green");
 }
 
-
 toggleHeader.addEventListener("click", () => {
-  if (header.classList.contains("red")){
-    header.classList.remove("red");
-    header.classList.add("green");
-    console.log("Green added");
-  } else {
-    header.classList.remove("green");
-    header.classList.add("red");
-    console.log("Red added");
-  }
-})
+  const isRed = header.classList.contains("red");
+  header.classList.toggle("red", !isRed);
+  header.classList.toggle("green", isRed);
+  console.log(isRed ? "Green added" : "Red added");
+});

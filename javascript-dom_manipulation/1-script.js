@@ -7,7 +7,7 @@ const RED = "#FF0000";
 const red_header = document.querySelector("#red-reader");
 const header = document.querySelector("header");
 
-red_header.addEventListener('click', () => header.style.color = WHITE);
+red_header.addEventListener('click', () => header.style.color = RED);
 
 }
 header.style.color = RED;

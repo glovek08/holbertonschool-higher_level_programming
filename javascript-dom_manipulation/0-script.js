@@ -1,4 +1,4 @@
-const WHITE = "#FF0000";
+const RED = "#FF0000";
 const header = document.querySelector("header");
 
-header.style.color = WHITE;
+header.style.color = RED;
