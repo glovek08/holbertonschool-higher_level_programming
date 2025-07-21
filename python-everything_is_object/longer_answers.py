@@ -91,12 +91,24 @@ Simples tuples are interned to same object.
 # QUESTION 27
 #Will the last line of this script print the same ID as before?
 a_27 = [1, 2, 3, 4]
-print(f"27: ID before: {id(a_27)}")
 a_27_id_before = id(a_27)
 print(f"27: {a_27}")
 a_27 = a_27 + [5]
 a_27_id_after = id(a_27)
 print(f"27: Is ID same? {a_27_id_after == a_27_id_before}")
 """
-So concat creates a new list.
+Concat creates a new list.
+"""
+
+# QUESTION 28
+a_28 = [1, 2, 3]
+a_28_id_before = id(a_28)
+a_28 += [4]
+print(f"28: does a_28 hold its previous ID? {id(a_28) == a_28_id_before}")
+
+"""
+The difference is in how = vs += operates.
+In 27: 'a_27 +' creates a new array and concats the element '5' to that new array which holds a copy of a_27
+then that is assigned to a_27.
+In 28 everything is done in place.
 """
