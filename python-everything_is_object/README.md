@@ -3,6 +3,9 @@ Python 问卷
 Python 编程问题和答案集合。
 文件列表
 
+Additionally, inside `longer_answers.py` you can find more detailed explanation for more complex answers besides Yes/No, mind you, I've wrote them, so they might be wrong.
+Why is this in chinese? IDK, but enjoy it.
+
     /0-answer.txt - 问题 0 答案
     /1-answer.txt - 问题 1 答案
     /2-answer.txt - 问题 2 答案
