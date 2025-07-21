@@ -5,4 +5,4 @@ acc = []
 def magic_string():
     global acc
     acc.append("BestSchool")
-    return ", ".join(acc)
+    return ", ".join(acc) + "$"
