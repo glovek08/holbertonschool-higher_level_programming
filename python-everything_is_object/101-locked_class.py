@@ -1,9 +1,15 @@
 #!/usr/bin/python3
 """
-This module contains a locked class that prevents new properties
-not defines in __slots__
+This module contains a locked class that prevents the user
+from dynamically creating new instance attributes,
+except for 'first_name'.
 """
 
 
 class LockedClass:
-    __slots__ = "first_name"
+    """
+    A class with restricted attributes. Only 'first_name' can be set.
+    Any attempt to set other attributes will raise an AttributeError.
+    """
+
+    __slots__ = ("first_name",)
