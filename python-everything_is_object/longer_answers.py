@@ -112,3 +112,37 @@ In 27: 'a_27 +' creates a new array and concats the element '5' to that new arra
 then that is assigned to a_27.
 In 28 everything is done in place.
 """
+
+
+# ADVANCED TASK 33
+
+a_104 = 1024
+b_104 = 1024
+print(f"104: Is a the same as b: {a_104 is b_104}")
+
+del a_104
+del b_104
+c_104 = 1024
+print(f"104: {c_104}")
+"""
+a = 1024
+b = 1024
+del a
+del b
+c = 1024
+
+- How many int objects are created by the execution of the first line of the script?
+A: 1, no other variable with same value to intern.
+
+- How many int objects are created by the execution of the second line of the script
+A: In CPython constants are usually reused within the same code block. So 0 if it's interned.
+
+- After the execution of line 3, is the int object pointed by a deleted? Answer with Yes or No
+A: No, the memory block stays put because B is still referencing it.
+
+- After the execution of line 4, is the int object pointed by b deleted? Answer with Yes or No
+A: Yes, no other variable is pointing to that memory block, so it's deleted.
+
+- How many int objects are created by the execution of the last line of the script
+A: 1, no other variables in memory to intern.
+"""
