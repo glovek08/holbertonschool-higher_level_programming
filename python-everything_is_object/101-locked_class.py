@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 This module contains a locked class that prevents the user
-from dynamically creating new instance attributes,
+fram dynamically creating new instance attributes,
 except for 'first_name'.
 """
 
