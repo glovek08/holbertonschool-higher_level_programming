@@ -125,6 +125,7 @@ del b_104
 c_104 = 1024
 print(f"104: {c_104}")
 """
+!!!! I'm leaving these as the correct answers because I've tested them and they are truty !!!!
 a = 1024
 b = 1024
 del a
